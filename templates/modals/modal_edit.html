@@ -1,0 +1,12 @@
+{% extends "modals/modal_form.html" %}
+{% load i18n %}
+
+{% block form_title_prefix %}{% trans "Edit" %} {% endblock %}
+
+{% block extra_form_controls %}
+<div class="pull-left">
+    <a href="{% block delete_url %}{% endblock %}" class="btn btn-danger" id="delete-controls">
+        {% block delete_text %}{% trans "Delete" %}{% endblock %}
+    </a>
+</div>
+{% endblock %}

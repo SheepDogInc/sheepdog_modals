@@ -1,0 +1,14 @@
+{% extends "modals/modal_form.html" %}
+{% load i18n %}
+
+{% block form_title %}{% trans "Confirm Deletion" %}{% endblock %}
+{% block form_message %}<h4>{% trans "You will not be able to undo this action." %}</h4>{% endblock %}
+{% block form_controls %}{% endblock %}
+{% block extra_form_controls %}
+    <div class="pull-right">
+        <a href="javascript:void();" class="btn" data-dismiss="modal">Cancel</a>
+        <a href="{% block delete_url %}{% endblock %}" class="btn btn-danger no-confirm" id="delete-controls">
+            {% block delete_text %}{% trans "Delete" %}{% endblock %}
+        </a>
+    </div>
+{% endblock %}
