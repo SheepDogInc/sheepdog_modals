@@ -1,0 +1,7 @@
+{
+    "name": "sheepdog_modals",
+    "dependencies": {
+        "spin.js": "1.3.0",
+        "jquery": ">=1.5.0"
+    }
+}
