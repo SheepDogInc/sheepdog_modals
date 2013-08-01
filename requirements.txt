@@ -1,0 +1,2 @@
+django-crispy-forms==1.2.8
+wsgiref==0.1.2
