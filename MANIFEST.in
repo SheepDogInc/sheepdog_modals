@@ -1,0 +1,3 @@
+recursive-include sheepdog_modals/static *
+recursive-include sheepdog_modals/templates *
+include sheepdog_modals/bower.json
