@@ -1,5 +1,8 @@
 from setuptools import setup, find_packages
 
+import sheepdog_modals
+
+
 with open('requirements.txt', 'rb') as f:
     requirements = [line.strip()
                     for line in f.readlines()
@@ -7,7 +10,7 @@ with open('requirements.txt', 'rb') as f:
 
 setup(
     name="sheepdog_modals",
-    version="0.9.10",
+    version=sheepdog_modals.__version__,
     author="The Sheepdog Labs team",
     author_email="development@sheepdog.com",
     description=("Easy to use modal views API for Django"),
