@@ -7,7 +7,7 @@ with open('requirements.txt', 'rb') as f:
 
 setup(
     name="sheepdog_modals",
-    version="0.9.9",
+    version="0.9.10",
     author="The Sheepdog Labs team",
     author_email="development@sheepdog.com",
     description=("Easy to use modal views API for Django"),
