@@ -15,6 +15,6 @@ To use Sheepdog Modals, have your modal file inherit from one of 'modal_form',
 
 Example:
 
-'''
+```html
 <a class="btn add-controls" href="{% url "modal_url" %}"><i class="icon-ok"></i> {% trans "Button Text" %}</a>
-'''
+```
