@@ -27,13 +27,12 @@
         <script type="text/javascript">         
 	    // Give DATEPICKER_FORMAT a default value if it is undefined, otherwise
 	    // modals (and other subsequent JS) will break.
-	    if (__DATEPICKER_FORMAT == undefined){
-	    	__DATEPICKER_FORMAT = "yy-mm-dd";
- 	    }
-            // Attach select2 by default, with same width as standard inputs
+	    var format = typeof(__DATEPICKER_FORMAT)==="undefined" ? "yy-mm-dd" : __DATEPICKER_FORMAT; 
+            
+	    // Attach select2 by default, with same width as standard inputs
             // (select2 width is set like border-box box-sizing)
             $('select').select2({'width': '100%'});
-            $('.dateinput').datepicker(__DATEPICKER_FORMAT);
+            $('.dateinput').datepicker(format);
         </script>
     {% endblock %}
 </form>
