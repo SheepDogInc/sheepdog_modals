@@ -52,11 +52,7 @@ postModalForm = (modal, form, actionUrl) ->
   else
     $.post(actionUrl, form.serialize(), (response) ->
       if response.status is 'success'
-        qs = if location.href.indexOf('?') is -1 then "?success=true" else "&success=true"
-        if location.href.indexOf('success=true') is -1
-          location += qs
-        else
-          location.reload()
+        window.location.href = response.url
       else
         setModalForm(modal, actionUrl, postModalForm, response))
 
