@@ -36,11 +36,11 @@ class ModalViewMixin(object):
                 'To call form_valid(), ModalViewMixin must be mixed with a'
                 ' view that supports form_valid()'
             )
-
         default_response = super(ModalViewMixin, self).form_valid(form)
         if self.request.is_ajax():
             return HttpResponse(
-                json.dumps({'status': 'success'}),
+                json.dumps({'status': 'success',
+                            'url': self.get_success_url()}),
                 mimetype='application/json')
         else:
             return default_response
